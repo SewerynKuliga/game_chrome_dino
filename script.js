@@ -1,6 +1,8 @@
-var character = document.querySelector(".character");
-var block = document.querySelector(".block");
+const character = document.querySelector(".character");
+const block = document.querySelector(".block");
+const result = document.querySelector(".result")
 let counter = 0;
+
 function jump() {
     if (character.classList == "animate") { return }
     character.classList.add("animate");
@@ -14,9 +16,11 @@ const checkDead = setInterval(() => {
     let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
     if (blockLeft < 32 && blockLeft > -20 && characterTop >= 220) {
         block.style.animation = "none";
-        alert("Game Over. score: " + Math.floor(counter / 100));
-        counter = 0;
-        block.style.animation = "block 1s infinite linear";
+        result.style.display = "block";
+        document.querySelector(".result").innerHTML = "Game Over. Score: " + Math.floor(counter / 100);
+        block.style.animation = "none";
+        counter = NaN;
+
     } else {
         counter++;
         document.querySelector(".scoreSpan").innerHTML = Math.floor(counter / 100);
