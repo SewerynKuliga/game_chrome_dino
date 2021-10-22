@@ -1,0 +1,49 @@
+@import url(reset.css);
+
+* {
+    overflow-x: hidden;
+}
+.game {
+    width: 50rem;
+    height: 20rem;
+    border: 1px solid black;
+    margin: auto;
+}
+
+.character {
+    width: 2rem;
+    height: 5rem;
+    background-color: red;
+    position: relative;
+    top: 15rem;
+}
+.animate {
+    animation: jump 500ms linear;
+}
+
+@keyframes jump {
+    0%{top:15rem;}
+    30%{top: 10rem;}
+    70%{top: 10rem;}
+    100%{top: 15rem;}
+    
+}
+
+.block {
+    width: 2rem;
+    height: 2rem;
+    background-color: blue;
+    position: relative;
+    top: 13rem;
+    left: 50rem;
+    animation: block 1s infinite linear;
+}
+
+@keyframes block {
+    0% {left:50rem;}
+    100% {left: -2rem;}
+}
+
+p {
+    text-align: center;
+}
