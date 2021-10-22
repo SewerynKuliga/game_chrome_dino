@@ -1,5 +1,3 @@
-@import url(reset.css);
-
 * {
     overflow-x: hidden;
 }
@@ -18,7 +16,7 @@
     top: 15rem;
 }
 .animate {
-    animation: jump 500ms linear;
+    animation: jump 0.3s linear;
 }
 
 @keyframes jump {
